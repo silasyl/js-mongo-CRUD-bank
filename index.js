@@ -2,7 +2,9 @@ import express from 'express';
 import mongoose from 'mongoose';
 import { accountRouter } from './routes/my-bank-api.js';
 
-require('dotenv').config();
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const uri = `mongodb+srv://${process.env.USER_DB}:${process.env.PSW_DB}@cluster0.3o6tz.mongodb.net/bank?retryWrites=true&w=majority`;
 
